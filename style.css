@@ -1,55 +1,49 @@
-/* 1. Arka Plan: Badem Ağacı */
+/* =========================================
+   1. GENEL YAPI VE ORTAK AYARLAR
+   ========================================= */
 body {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('img/arkaplan.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: #000000 !important; /* Net siyah yazılar */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-/* 2. Tanıtım Kutusu (Saydam ve Çerçeveli) */
-.icerik-kutusu {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-}
-
+/* Tüm sayfalardaki ana kutu düzeni */
 .yazi-alani {
     width: 100%;
-    max-width: 800px;
-    background: rgba(255, 255, 255, 0.85); /* Hafif saydam beyaz zemin */
+    max-width: 850px;
+    margin: 50px auto;
     padding: 40px;
-    border-radius: 25px;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px); /* Buzlu cam etkisi */
+    border-radius: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
 }
 
-/* 3. İlgi Alanları ve Resimlerin Yan Yana Dizilimi */
+
 .hobi-satiri {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: rgba(255, 255, 255, 0.5); /* Yazı altına ekstra hafif saydamlık */
-    padding: 15px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .hobi-metin {
     flex: 1;
+    padding-right: 20px;
 }
 
 .hobi-resim-cerceve {
-    width: 70px;
-    height: 70px;
-    border: 3px solid #ffffff; /* Beyaz çerçeve */
-    border-radius: 12px;
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+    border: 3px solid #fff;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-left: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 .hobi-resim-cerceve img {
@@ -58,32 +52,69 @@ body {
     object-fit: cover;
 }
 
-/* 4. Butonlar */
-.buton-github, .buton-uni {
-    display: inline-block;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 10px;
+/* =========================================
+   2. ANA SAYFA (Sarımsı Sıcak Cam)
+   ========================================= */
+body.ana-sayfa {
+    background: url('img/arkaplan.jpg') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+body.ana-sayfa .yazi-alani {
+    background: rgba(255, 230, 150, 0.25) !important; 
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #2d241e;
+}
+
+/* =========================================
+   3. ŞEHRİM SAYFASI 
+   ========================================= */
+body.sehrim-sayfasi {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('img/arkaplan2.jpg') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+body.sehrim-sayfasi .yazi-alani {
+    background: rgba(13, 57, 94, 0.296) !important; 
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #2d241e;
+}
+
+/* =========================================
+   4. MİRASIMIZ SAYFASI (Yeşil Cam - Sakaryaspor)
+   ========================================= */
+body.miras-sayfasi {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/arkaplan3.jpg') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+body.miras-sayfasi .yazi-alani {
+    background: rgba(25, 135, 84, 0.3) !important; 
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white !important;
-    font-weight: 600;
-    margin-right: 10px;
-    transition: 0.3s;
 }
 
-.buton-github { background-color: #333; }
-.buton-uni { background-color: #2d6a4f; }
-
-.buton-github:hover, .buton-uni:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
+body.miras-sayfasi .table, 
+body.miras-sayfasi .list-group-item {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #333 !important;
 }
 
-/* 5. Video */
+/* =========================================
+   5. BUTONLAR VE VİDEO
+   ========================================= */
+.buton-grubu { display: flex; gap: 15px; margin: 25px 0; }
+.buton-github { background-color: #333; color: white !important; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: 600; }
+.buton-uni { background-color: #2d6a4f; color: white !important; padding: 12px 25px; border-radius: 12px; text-decoration: none; font-weight: 600; }
+
 .video-cerceve iframe {
-    width: 100%;
-    height: 350px;
-    border-radius: 20px;
-    margin-top: 30px;
-    border: none;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 100%; height: 400px;
+    border-radius: 25px; border: none;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
