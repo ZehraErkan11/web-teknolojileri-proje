@@ -2,12 +2,12 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özgeçmiş | Zehra Erkan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="ana-sayfa">
+<body class="ozgecmis-sayfasi">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
@@ -38,7 +38,7 @@
                     <div class="p-4 bg-dark bg-opacity-25 rounded-4 border border-warning border-opacity-25 shadow-sm">
                         <h4 class="text-warning mb-4">İletişim</h4>
                         <p class="mb-3">📍 Sakarya / Türkiye</p>
-                        <p class="mb-3">📧 zehra@sakarya.edu.tr</p>
+                        <p class="mb-3">zehra.erkan@ogr.sakarya.edu.tr</p>
                         
                         <div class="d-grid gap-2 mt-4">
                             <a href="https://github.com/ZehraErkan11" class="btn btn-outline-info btn-sm text-start" target="_blank">💻 GitHub Profilim</a>
