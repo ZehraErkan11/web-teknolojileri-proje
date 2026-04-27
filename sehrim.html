@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Şehrim - Sakarya</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Kendi yazdığımız CSS dosyamız -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- kenarlarda duran 4 adet Polaroid Sakarya Fotoğrafı -->
+    <div class="kenar-resimleri">
+        <img src="img/sakarya1 (1).jpeg" class="kenar-resim sol-ust" alt="Dekor">
+        <img src="img/sakarya1 (2).jpeg" class="kenar-resim sol-alt" alt="Dekor">
+        <img src="img/sakarya1 (3).jpeg" class="kenar-resim sag-ust" alt="Dekor">
+        <img src="img/sakarya1 (4).jpeg" class="kenar-resim sag-alt" alt="Dekor">
+    </div>
+
+
+
+    <!--  burada sayfanın arkasındaki orman resmini tutan div bulunuyor -->
+    <div class="ust-banner"></div>
+
+    <!-- ÜST MENÜ (NAVBAR) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Zehra Erkan</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Hakkında</a>
+                <a class="nav-link active" href="sehrim.html">Şehrim</a>
+                <a class="nav-link" href="takimimiz.html">Takımımız</a>
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                <a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+                <a class="nav-link" href="iletisim.php">İletişim</a>
+                <a class="nav-link" href="login.php">Giriş Yap</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ANA İÇERİK ALANI -->
+    <div class="container">
+        <div class="yazi-alani text-center">
+            
+
+
+            <!-- El Yazısı Başlık (Caveat fontu) -->
+            <h1 class="el-yazisi mt-2 mb-4">Benim Şehrim: Sakarya</h1>
+            
+            <p class="mb-5 text-muted text-start" style="padding: 0 20px;">
+                Sakarya, Marmara Bölgesi'nin en büyük beşinci ilidir ve ismini topraklarından geçen Sakarya Nehri'nden alır. 
+                2021 yılında kazandığı <b>"Bisiklet Şehri"</b> unvanı ile öne çıkan şehrimiz, güncel 1.110.735 nüfusuyla 
+                sürekli gelişen bir yapıya sahiptir. Kuzeyinde Karadeniz, batısında ise Kocaeli ve Bursa ile komşudur.
+            </p>
+
+            <!-- SLIDER (Kaydırmalı Resim Galerisi) -->
+            <!-- burada Bootstrap'in carousel (slider) bileşenini kullandım -->
+            <div id="sakaryaSlider" class="carousel slide shadow mb-5" data-bs-ride="carousel" style="border-radius: 20px; overflow: hidden; border: 5px solid #e8f5e9;">
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        <a href="https://tr.wikipedia.org/wiki/Sapanca_G%C3%B6l%C3%BC" target="_blank">
+                            <img src="img/sapanca.jpg" class="d-block w-100" alt="Sapanca" style="height: 400px; object-fit: cover;">
+                            <div class="carousel-caption" style="background: rgba(0,0,0,0.5); border-radius: 10px;"><h5>Sapanca Gölü</h5></div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://www.tarakli.bel.tr/" target="_blank">
+                            <img src="img/tarakli.jpg" class="d-block w-100" alt="Taraklı" style="height: 400px; object-fit: cover;">
+                            <div class="carousel-caption" style="background: rgba(0,0,0,0.5); border-radius: 10px;"><h5>Taraklı Tarihi Evleri</h5></div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://tr.wikipedia.org/wiki/Poyrazlar_G%C3%B6l%C3%BC" target="_blank">
+                            <img src="img/poyrazlar.jpg" class="d-block w-100" alt="Poyrazlar" style="height: 400px; object-fit: cover;">
+                            <div class="carousel-caption" style="background: rgba(0,0,0,0.5); border-radius: 10px;"><h5>Poyrazlar Gölü</h5></div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="https://tr.wikipedia.org/wiki/Justinianus_K%C3%B6pr%C3%BCs%C3%BC" target="_blank">
+                            <img src="img/kopru.jpg" class="d-block w-100" alt="Köprü" style="height: 400px; object-fit: cover;">
+                            <div class="carousel-caption" style="background: rgba(0,0,0,0.5); border-radius: 10px;"><h5>Justinianus Köprüsü</h5></div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Slider Sağ-Sol Okları -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sakaryaSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <!-- Bilgi Kutusu -->
+            <div class="kutu-basit text-start">
+                <h4 style="color: #5d6841; font-weight: 600;" class="mb-3">Ekonomi ve Coğrafya</h4>
+                <p>🚜 <b>Tarım:</b> Hendek, Karasu ve Kocaali ilçelerinde fındık; merkezde ise mısır tarımı ön plandadır.</p>
+                <p>🏗️ <b>Sanayi:</b> Sakarya ekonomisinde sanayi kuruluşları Adapazarı çevresinde yoğunlaşmış durumdadır.</p>
+                <p>⛰️ <b>Coğrafya:</b> Deniz seviyesinden 31 metre yükseklikte yer alan şehir, zengin su kaynaklarına sahiptir.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
