@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İlgi Alanlarım | Zehra Erkan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ust-banner"></div>
+
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <!-- Logo / İsim -->
+        <a class="navbar-brand" href="#">Zehra Erkan</a>
+
+        <!-- Hamburger Menü Butonu  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarZehra" aria-controls="navbarZehra" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menü İçeriği  -->
+        <div class="collapse navbar-collapse" id="navbarZehra">
+            <div class="navbar-nav ms-auto"> <!-- ms-auto linkleri sağa yaslar -->
+                <a class="nav-link" href="index.html">Hakkında</a>
+                <a class="nav-link" href="sehrim.html">Şehrim</a>
+                <a class="nav-link" href="takimimiz.html">Takımımız</a>
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                <a class="nav-link active" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+                <a class="nav-link" href="iletisim.php">İletişim</a>
+                <a class="nav-link" href="login.php">Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <div class="container pb-5">
+        <div class="yazi-alani text-center" style="max-width: 1000px; margin: 50px auto;">
+            
+            <h1 class="el-yazisi mt-2 mb-4">İlgi Alanlarım</h1>
+            <p class="text-muted mb-5">
+                Bu sayfa, hobilerim arasında yer alan görsel sanatlar ile teknik becerilerimi bir araya getirdiğim bir çalışma alanıdır.
+                Galerideki eserler, Chicago Sanat Enstitüsü API'si üzerinden çekilmektedir. 
+                Odak noktasında ise post-empresyonizm akımının en önemli temsilcisi olan Vincent van Gogh'un çalışmaları yer alıyor.
+
+            <div class="row text-start" id="galeri-alani">
+                </div>
+
+            <div id="hata-alani" class="alert alert-danger" style="display: none;"></div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

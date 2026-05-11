@@ -3,28 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Zehra Erkan - Portfolyo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS (Hazır kütüphane, butonlar ve hizalama için) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Zehra Erkan - Portfolyo</title><!--tarayıcı kısmında görünen isim-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--siteyi mobile uygun hale getirir-->
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><!--bootstrap projeye dahil edilir-->
     <!-- Kendi yazdığımız CSS dosyamız -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    
+    <div class="ust-banner"></div><!--sayfanın üstünde bulunan resimli kısım-->
 
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <!-- Logo / İsim -->
+        <a class="navbar-brand" href="#">Zehra Erkan</a>
 
+        <!-- Hamburger Menü Butonu  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarZehra" aria-controls="navbarZehra" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-    <!--  burada sayfanın arkasındaki orman resmini tutan div bulunuyor -->
-    <div class="ust-banner"></div>
-
-    <!-- ÜST MENÜ (NAVBAR) -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-        <div class="container">
-            <a class="navbar-brand" href="#">Zehra Erkan</a>
-            <div class="navbar-nav">
+        <!-- Menü İçeriği -->
+        <div class="collapse navbar-collapse" id="navbarZehra">
+            <div class="navbar-nav ms-auto"> <!-- ms-auto linkleri sağa yaslar -->
                 <a class="nav-link active" href="index.html">Hakkında</a>
                 <a class="nav-link" href="sehrim.html">Şehrim</a>
                 <a class="nav-link" href="takimimiz.html">Takımımız</a>
@@ -34,17 +38,18 @@
                 <a class="nav-link" href="login.php">Giriş Yap</a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- ANA İÇERİK ALANI (Beyaz Kutu) -->
-    <div class="container">
+    <!-- ANA İÇERİK ALANI  -->
+    <div class="container"><!--içerik ekranda ortalanır-->
         
-        <div class="yazi-alani text-center">
+        <div class="yazi-alani text-center"><!--text-center her şeyi ortaya hizalıyor-->
 
-            <!-- Profil Resmi (Yuvarlak ve dışarı taşan kısım) -->
+            <!-- Profil Resmi -->
             <img src="img/zehra3.jpeg" alt="Zehra Erkan" class="profil-resmi">
 
-            <!-- El Yazısı Başlık (Caveat fontu) -->
+            <!-- El Yazısı Başlık -->
             <h1 class="el-yazisi">Merhaba, Ben Zehra</h1>
 
             <p class="mb-4">
@@ -52,10 +57,10 @@
             </p>
 
             <!-- Bootstrap Grid Sistemi: Ekranı ikiye böldük (col-md-6) -->
-            <div class="row text-start mt-5">
+            <div class="row text-start mt-5"><!--text-start yazıları sola hizalar mt-5 boşluğu ayarlar-->
 
                 <!-- SOL SÜTUN: HOBİLER -->
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4"><!--ekranı ikiye böldük-->
                     <h4 class="mb-3 ana-baslik">İlgi Alanlarım</h4>
 
                     <div class="kutu-basit">
@@ -63,7 +68,7 @@
                             <div class="hobi-metin">
                                 <p>🎨 <b>Resim:</b> Karakalem ve yağlı boya çalışmaları yapıyorum.</p>
                             </div>
-                            <!-- Hocam, resimleri sağda kutu içine almak için flexbox kullandık -->
+                           
                             <div class="hobi-resim-cerceve ms-2">
                                 <img src="img/indir (14).jpg" alt="Resim Çalışmam">
                             </div>
@@ -85,16 +90,14 @@
                     <h4 class="mb-3 ana-baslik">Eğitim</h4>
                     <div class="kutu-basit">
                         <p class="mb-2">🎓 <b>Sakarya Üniversitesi</b><br>Bilgisayar Mühendisliği (Lisans)</p>
-                        <!-- Araya haki yeşili çizgi attık -->
                         <hr class="haki-cizgi">
                         <p class="mb-0">🏫 <b>Sakarya Anadolu Lisesi</b><br>Lise Eğitimi (Sayısal)</p>
                     </div>
 
-                    <!-- Kendi tasarladığımız yuvarlak butonlar -->
+                    
                     <div class="mt-4 text-center">
                         <a href="https://github.com/ZehraErkan11" class="buton-basit me-2">GitHub Profilim</a>
-                        <a href="https://www.sakarya.edu.tr" class="buton-basit"
-                            >Üniversitem</a>
+                        <a href="https://www.sakarya.edu.tr" class="buton-basit">Üniversitem</a>
                     </div>
                 </div>
             </div>

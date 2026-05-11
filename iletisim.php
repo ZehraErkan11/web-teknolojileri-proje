@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim | Zehra Erkan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <div class="ust-banner"></div> 
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+       
+        <a class="navbar-brand" href="#">Zehra Erkan</a>
+
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarZehra" aria-controls="navbarZehra" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+       
+        <div class="collapse navbar-collapse" id="navbarZehra">
+            <div class="navbar-nav ms-auto"> <!-- ms-auto linkleri sağa yaslar -->
+                <a class="nav-link" href="index.html">Hakkında</a>
+                <a class="nav-link" href="sehrim.html">Şehrim</a>
+                <a class="nav-link" href="takimimiz.html">Takımımız</a>
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+                <a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
+                <a class="nav-link active" href="iletisim.php">İletişim</a>
+                <a class="nav-link" href="login.php">Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <div class="container pb-5">
+        <div class="yazi-alani mt-5 shadow-lg" style="max-width: 850px; margin: auto; padding: 40px; border-radius: 20px;">
+            
+            <h1 class="el-yazisi text-center mb-4">Benimle İletişime Geçin</h1>
+
+            <div id="vue-app">
+                <!-- Vue.js Hataları -->
+                <div v-if="vueHatalari.length > 0" class="alert alert-danger mb-4">
+                    <ul class="mb-0">
+                        <li v-for="hata in vueHatalari">{{ hata }}</li>
+                    </ul>
+                </div>
+
+                <!-- Klasik JS Hataları -->
+                <div id="js-hata-alani" class="alert alert-warning mb-4" style="display: none;"></div>
+
+                
+                <form id="iletisimFormu" action="mesaj-sonuc.php" method="POST" class="text-start">
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Ad Soyad</label>
+                            <input type="text" class="form-control" id="ad" name="ad" v-model="formVerisi.ad">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">E-posta</label>
+                            <input type="text" class="form-control" id="email" name="email" v-model="formVerisi.email">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Telefon</label>
+                            <input type="text" class="form-control" id="telefon" name="telefon" v-model="formVerisi.telefon">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-bold">Yaşadığınız Şehir</label>
+                            <select class="form-select" id="sehir" name="sehir" v-model="formVerisi.sehir">
+                                <option value="">Şehir Seçiniz...</option>
+                                <option value="Sakarya">Sakarya</option>
+                                <option value="İstanbul">İstanbul</option>
+                                <option value="Diğer">Diğer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold d-block">Cinsiyet</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cinsiyet" value="Erkek" v-model="formVerisi.cinsiyet">
+                            <label class="form-check-label">Erkek</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="cinsiyet" value="Kadın" v-model="formVerisi.cinsiyet">
+                            <label class="form-check-label">Kadın</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Mesajınız</label>
+                        <textarea class="form-control" id="mesaj" name="mesaj" rows="4" v-model="formVerisi.mesaj"></textarea>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" id="onay" v-model="formVerisi.onay">
+                        <label class="form-check-label">Kullanım koşullarını kabul ediyorum.</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 d-flex gap-3">
+                            <button type="button" class="buton-basit border-0 flex-grow-1" onclick="klasikJSKontrol()">Klasik JS ile gönder </button>
+                            <button type="button" class="buton-basit border-0 flex-grow-1" @click="vueJSkontrol()">Vue.js ilr gönder</button>
+                         </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

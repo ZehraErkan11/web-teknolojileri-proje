@@ -11,18 +11,22 @@
 </head>
 <body>
 
-
-
-
-
-    <!-- burada sayfanın arkasındaki orman resmini tutan div bulunuyor -->
+   
     <div class="ust-banner"></div>
 
-    <!-- ÜST MENÜ (NAVBAR) -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-        <div class="container">
-            <a class="navbar-brand" href="#">Zehra Erkan</a>
-            <div class="navbar-nav">
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container">
+        <!-- Logo / İsim -->
+        <a class="navbar-brand" href="#">Zehra Erkan</a>
+
+        <!-- Hamburger Menü Butonu (Mobilde görünen kısım) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarZehra" aria-controls="navbarZehra" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menü İçeriği (Butona tıklandığında açılacak kısım) -->
+        <div class="collapse navbar-collapse" id="navbarZehra">
+            <div class="navbar-nav ms-auto"> <!-- ms-auto linkleri sağa yaslar -->
                 <a class="nav-link" href="index.html">Hakkında</a>
                 <a class="nav-link" href="sehrim.html">Şehrim</a>
                 <a class="nav-link" href="takimimiz.html">Takımımız</a>
@@ -32,7 +36,8 @@
                 <a class="nav-link" href="login.php">Giriş Yap</a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- ANA İÇERİK ALANI (Semantik HTML5 kullanıldı: main, article, aside, section) -->
     <main class="container">
@@ -69,32 +74,38 @@
                             yerleştim şu anda 1. sınıfım eğitimime devam ediyorum.
                         </p> 
                     </div>
+                  <div class="kutu-basit">
+                        <h3 class="ana-baslik">🎓 Eğitim Yolculuğum</h3>
+                        <br>
+                        <!-- Sakarya Üniversitesi -->
+                            <div>
+                                <h5><b>Sakarya Üniversitesi</b></h5>
+                                <p>Bilgisayar Mühendisliği (Lisans)</p>
+                                 <p>2025 - Günümüz</p>
+                            </div>
+                        <br>
 
-                    <div class="kutu-basit" >
-                        <h3 class="pb-2 mb-4 ana-baslik" >🎓 Eğitim Yolculuğum</h3>
-                        
-                        <!-- Sol tarafına dikey çizgi (border-left) ekleyerek zaman çizelgesi efekti verdik -->
-                        <div class="mb-4 ps-3 border-start border-success border-4 py-2">
-                            <h5 class="fw-bold mb-1">Sakarya Üniversitesi</h5>
-                            <p class="mb-0 text-success">Bilgisayar Mühendisliği (Lisans)</p>
-                            <small class="text-muted">2025 - Günümüz</small>
-                        </div>
+                        <!-- Sakarya Anadolu Lisesi -->
+                            <div>
+                                <h5><b>Sakarya Anadolu Lisesi</b></h5>
+                                <p>2021 - 2025</p>
+                            </div>
+                        <br>
 
-                        <div class="mb-4 ps-3 border-start border-secondary border-2 py-1">
-                            <h5 class="mb-1">Sakarya Anadolu Lisesi</h5>
-                            <small class="text-muted">2021 - 2025</small>
-                        </div>
+                        <!-- Ortaokul -->
+                            <div >
+                                <h5><b>Hacı Emine Oba Ortaokulu</b></h5>
+                                <p>2017 - 2021</p>
+                            </div>
+                        <br>
 
-                        <div class="mb-4 ps-3 border-start border-secondary border-2 py-1">
-                            <h5 class="mb-1">Hacı Emine Oba Ortaokulu</h5>
-                            <small class="text-muted">2017 - 2021</small>
-                        </div>
-
-                        <div class="ps-3 border-start border-secondary border-2 py-1">
-                            <h5 class="mb-1">Hacı Emine Oba İlkokulu</h5>
-                            <small class="text-muted">2013 - 2017</small>
-                        </div>
-                    </div>
+                        <!-- İlkokul  -->
+                            <div>
+                                <h5><b>Hacı Emine Oba İlkokulu</b></h5>
+                                <p>2013 - 2017</p>
+                            </div>
+                </div>
+   
                 </section>
             </div>
         </article>
