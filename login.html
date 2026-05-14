@@ -9,27 +9,27 @@
     
     <script>
         function dogrula() {
-            // Formdaki değerleri alıyoruz ve PHP'deki strtolower() gibi küçük harfe çeviriyoruz
+            
             var email = document.forms["loginForm"]["email"].value.trim().toLowerCase();
             var sifre = document.forms["loginForm"]["sifre"].value.trim().toLowerCase();
             var hataGosterimi = document.getElementById("hataMesajiAlani");
 
-            // Her tıklamada eski hata mesajını gizle
+           
             hataGosterimi.style.display = "none";
 
-            // 1. Boş alan kontrolü
+           
             if (email == "" || sifre == "") {
                 alert("E-posta ve şifre alanları boş bırakılamaz!");
                 return false; 
             }
 
-            // 2. Mail formatı kontrolü 
+           
             if (!email.includes("@sakarya.edu.tr")) {
                 alert("Lütfen geçerli bir Sakarya Üniversitesi mail adresi giriniz!");
                 return false;
             }
 
-            // 3. Şifre formatı kontrolü (b + 9 rakam)
+            
             if (sifre.length !== 10 || sifre.charAt(0) !== 'b') {
                 alert("Şifreniz 'b' ile başlamalı ve toplam 10 karakter olmalıdır!");
                 return false;
@@ -37,10 +37,10 @@
 
 
             
-            // 4. GİRİŞ KONTROLÜ
+        
             var beklenen_mail = sifre + "@sakarya.edu.tr";
 
-            // Eğer mail beklenen maile EŞİT DEĞİLSE (!==) hata ver ve durdur
+            
             if (email !== beklenen_mail)
              {
                 hataGosterimi.style.display = "block";
@@ -48,7 +48,7 @@
                 return false;
             }
 
-            // Üstteki if bloğuna takılmadıysa (hata yoksa) formu doğrudan POST et
+           
             return true;
         }
     </script>
@@ -86,10 +86,10 @@
     <div class="yazi-alani shadow-lg mx-auto p-5" style="max-width: 500px; border-radius: 20px;">
         <h2 class="text-center el-yazisi mb-4" style="color: #5d6841;">Giriş Paneli</h2>
 
-        <!-- JS ile kontrol edilecek hata mesajı alanı (Başlangıçta gizli) -->
+       
         <div id="hataMesajiAlani" class="alert alert-danger text-center small" style="display: none;"></div>
 
-        <!-- action kısmını boş bıraktık çünkü yönlendirmeyi JS yapacak -->
+       
         <form name="loginForm" action="basarili.php" method="POST" onsubmit="return dogrula()">
             <div class="mb-3">
                 <label class="form-label fw-bold">E-posta</label>
