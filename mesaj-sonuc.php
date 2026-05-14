@@ -27,7 +27,7 @@
             </div>
             
             <div class="text-center mt-4">
-                <a href="iletisim.php" class="buton-basit text-decoration-none">Geri Dön</a>
+                <a href="iletisim.html" class="buton-basit text-decoration-none">Geri Dön</a>
             </div>
         </div>
     </div>

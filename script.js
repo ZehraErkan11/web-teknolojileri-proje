@@ -71,6 +71,8 @@ function klasikJSKontrol() {
     const sehir = document.getElementById('sehir').value;
     const cinsiyet = document.querySelector('input[name="cinsiyet"]:checked');
     const onay = document.getElementById('onay').checked;
+    const mesaj = document.getElementById('mesaj').value.trim();
+
 
    
     const isimKurali = /^[a-zA-ZçÇğĞıİöÖşŞüÜ\s]+$/; // SADECE HARF kuralı
@@ -99,12 +101,17 @@ function klasikJSKontrol() {
         alert("Telefon numarası tam 11 haneli bir sayı olmalıdır.");
         return; 
     }
-
+    if (mesaj === "") {
+        alert("Lütfen iletmek istediğiniz mesajı yazın.");
+        return;
+    }
     // SEÇİMLER
     if (sehir === "" || !cinsiyet || !onay) {
         alert("Lütfen tüm seçimleri yapın ve kutucuğu onaylayın.");
         return;
     }
+    // MESAJ KONTROLÜ 
+   
 
     // 4. EĞER BURAYA KADAR DURMADIYSA:
     alert("Başarılı! Form gönderiliyor.");

@@ -29,8 +29,8 @@
                 <a class="nav-link" href="takimimiz.html">Takımımız</a>
                 <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
                 <a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
-                <a class="nav-link" href="iletisim.php">İletişim</a>
-                <a class="nav-link" href="login.php">Giriş Yap</a>
+                <a class="nav-link" href="iletisim.html">İletişim</a>
+                <a class="nav-link" href="login.html">Giriş Yap</a>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
     <div class="container">
         <div class="yazi-alani text-center" style="max-width: 600px; margin-left: auto; margin-right: auto; padding: 50px 20px;">
             <h1 class="el-yazisi" style="font-size: 3rem; color: #5d6841;">
-                Hoşgeldiniz <?php echo isset($_GET['ogr']) ? htmlspecialchars($_GET['ogr']) : 'Öğrenci'; ?>
+                Hoşgeldiniz <?php echo isset($_POST['sifre']) ? htmlspecialchars($_POST['sifre']) : 'Öğrenci'; ?>
             </h1>
             <p class="text-muted mt-3 fs-5">Giriş işleminiz başarıyla tamamlandı.</p>
             <br>
