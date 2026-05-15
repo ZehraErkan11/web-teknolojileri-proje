@@ -9,47 +9,18 @@
     
     <script>
         function dogrula() {
-            
-            var email = document.forms["loginForm"]["email"].value.trim().toLowerCase();
-            var sifre = document.forms["loginForm"]["sifre"].value.trim().toLowerCase();
-            var hataGosterimi = document.getElementById("hataMesajiAlani");
+            var email = document.forms["loginForm"]["email"].value.trim();
+            var sifre = document.forms["loginForm"]["sifre"].value.trim();
 
-           
-            hataGosterimi.style.display = "none";
-
-           
             if (email == "" || sifre == "") {
                 alert("E-posta ve şifre alanları boş bırakılamaz!");
                 return false; 
             }
-
-           
-            if (!email.includes("@sakarya.edu.tr")) {
+            if (!email.endsWith("@sakarya.edu.tr")) {
                 alert("Lütfen geçerli bir Sakarya Üniversitesi mail adresi giriniz!");
                 return false;
             }
-
-            
-            if (sifre.length !== 10 || sifre.charAt(0) !== 'b') {
-                alert("Şifreniz 'b' ile başlamalı ve toplam 10 karakter olmalıdır!");
-                return false;
-            }
-
-
-            
-        
-            var beklenen_mail = sifre + "@sakarya.edu.tr";
-
-            
-            if (email !== beklenen_mail)
-             {
-                hataGosterimi.style.display = "block";
-                hataGosterimi.innerText = "Hatalı giriş! Kullanıcı adınız ile şifreniz eşleşmiyor.";
-                return false;
-            }
-
-           
-            return true;
+            return true; 
         }
     </script>
 </head>
@@ -59,18 +30,17 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
     <div class="container">
-        <!-- Logo / İsim -->
         <a class="navbar-brand" href="#">Zehra Erkan</a>
 
-        <!-- Hamburger Menü Butonu -->
+         <!-- Hamburger Menü Butonu  -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarZehra" aria-controls="navbarZehra" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Menü İçeriği  -->
+
         <div class="collapse navbar-collapse" id="navbarZehra">
-            <div class="navbar-nav ms-auto"> 
-                <a class="nav-link" href="index.html">Hakkında</a>
+            <div class="navbar-nav ms-auto">
+                 <a class="nav-link" href="index.html">Hakkında</a>
                 <a class="nav-link" href="sehrim.html">Şehrim</a>
                 <a class="nav-link" href="takimimiz.html">Takımımız</a>
                 <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
@@ -86,18 +56,16 @@
     <div class="yazi-alani shadow-lg mx-auto p-5" style="max-width: 500px; border-radius: 20px;">
         <h2 class="text-center el-yazisi mb-4" style="color: #5d6841;">Giriş Paneli</h2>
 
-       
-        <div id="hataMesajiAlani" class="alert alert-danger text-center small" style="display: none;"></div>
+        <div id="hataMesaji" class="alert alert-danger text-center small" style="display:none;">Hatalı Giriş!</div>
 
-       
         <form name="loginForm" action="basarili.php" method="POST" onsubmit="return dogrula()">
             <div class="mb-3">
                 <label class="form-label fw-bold">E-posta</label>
-                <input type="text" class="form-control" name="email" placeholder="b241210001@sakarya.edu.tr">
+                <input type="text" class="form-control" name="email" placeholder="b251210002@sakarya.edu.tr">
             </div>
             <div class="mb-4">
                 <label class="form-label fw-bold">Şifre</label>
-                <input type="password" class="form-control" name="sifre" placeholder="b241210001">
+                <input type="password" class="form-control" name="sifre" placeholder="b251210002">
             </div>
             <button type="submit" class="buton-basit w-100 border-0 p-2" style="background-color: #8a966a; color: white;">
                 Giriş Yap
@@ -105,6 +73,13 @@
         </form>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Eğer URL'de hata=1 varsa hata mesajını göster 
+    if(window.location.search.includes("hata=1")) {
+        document.getElementById("hataMesaji").style.display = "block";
+    }
+</script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
